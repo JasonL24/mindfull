@@ -47,7 +47,7 @@ const Dashboard = () => {
         </ul>
       </div>
       
-      <h4 className="ui centered middle aligned four column grid">Don't see your name?</h4>
+      <h3 className="ui centered middle aligned four column grid">Don't see your name?</h3>
       <div className="ui centered middle aligned four column grid">
         <form onSubmit={onUserSubmit}>
             <input type="text" value={inputVal} onChange={onInputChange} />

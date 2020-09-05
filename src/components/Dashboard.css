@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 55px;
 }
 
 .user-buttons button {
@@ -19,5 +21,6 @@
   border-radius: 12%;
   margin: 10px 5px;
   padding: 45px 55px;
-
+  width: 200px;
+  cursor: pointer;
 }

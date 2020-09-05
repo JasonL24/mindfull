@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getTrivia, addPoints } from '../../actions';
 
 const Trivia = () => {
@@ -80,6 +81,9 @@ const Trivia = () => {
       </ul>
       {user.points}
       {showMsg()}
+      <Link to="/activities">
+        <button>Finish Trivia</button>
+      </Link>
     </div>
   )
 }
