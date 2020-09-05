@@ -1,9 +1,10 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
     return (
       <div>
-          <h1 className="ui dividing header center aligned teal">Active Mind</h1>
+          <h1 className="heading">Active Mind</h1>
       </div>
     )
 }

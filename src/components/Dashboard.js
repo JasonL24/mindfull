@@ -7,6 +7,7 @@ import { addUser, setActive } from '../actions';
 import './Dashboard.css';
 
 
+
 const Dashboard = () => {
   const [inputVal, setInputVal] = useState('');
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Dashboard = () => {
   const onUserSubmit = (event) => {
     event.preventDefault();
     if (inputVal !== '') {
-      dispatch(addUser({ name: inputVal, userid: uniqid(), points: 0 }));
+      dispatch(addUser({ name: inputVal, userid: uniqid(), points: 0, tasks: [] }));
       setInputVal('');
     }
   }
@@ -39,32 +40,36 @@ const Dashboard = () => {
   }
 
   return (
-    <div>
+    <div className="overlay">
       <div>
-        <h2 className="ui header center aligned welcome-msg">Welcome! Who is playing?</h2>
+        <h2 className="ui center aligned welcome-msg">Welcome! Who is playing?</h2>
         <ul className="user-buttons">
           {renderUsers()}
         </ul>
       </div>
       
-      <h3 className="ui centered middle aligned four column grid">Don't see your name?</h3>
-      <div className="ui centered middle aligned four column grid">
-        <form onSubmit={onUserSubmit}>
-            <input type="text" value={inputVal} onChange={onInputChange} />
-            <div>
-                <button className="ui vertical animated button">
-                    <div className="hidden content">
-                        <i aria-hidden="true" className="user plus icon"></i>
-                    </div>
-                    <div className="visible content">
-                        Add User
-                    </div>
-                </button>
-            </div>
-        </form>
-       </div>
+      <div className="signUp">
+        <h3 className="ui centered middle aligned four column grid see-name">Don't see your name?</h3>
+        <div className="ui centered middle aligned four column grid">
+          <form onSubmit={onUserSubmit}>
+              <input type="text" value={inputVal} onChange={onInputChange}  className="enter-user" />
+              <div>
+                  <button className="ui vertical animated button teal">
+                      <div className="hidden content">
+                          <i aria-hidden="true" className="user plus icon"></i>
+                      </div>
+                      <div className="visible content">
+                          Add User
+                      </div>
+                  </button>
+              </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
+
+
 
 export default Dashboard;

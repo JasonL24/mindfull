@@ -3,3 +3,55 @@
   flex-direction: column;
   align-items: center;
 }
+
+.greeting h1 {
+  font-size: 50px;
+}
+
+.greeting h2 {
+  font-size: 38px;
+  margin-bottom: 22px;
+}
+
+.greeting p {
+  font-size: 25px;
+  background-color: #008e87;
+  padding: 5px 3px;
+  color: #ffffff;
+  border: #ffffff solid 1px;
+  margin-bottom: 10px;
+}
+
+.activity-btn {
+  text-decoration: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px 30px;
+  padding: 45px;
+  border-radius: 15%;
+  background-color: #008e87;
+  cursor: pointer;
+}
+
+.activity-btn img {
+  width: 200px;
+  height: 200px;
+}
+
+.activity-btn h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.activities-group {
+  display: flex;
+  justify-content: center;
+
+}
+
+.title-img {
+  margin-top: 35px;
+}
