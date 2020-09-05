@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import uniqid from 'uniqid';
 
-import { addUser } from '../actions';
+import { addUser, setActive } from '../actions';
+import './Dashboard.css';
+
 
 const Dashboard = () => {
   const [inputVal, setInputVal] = useState('');
@@ -15,7 +19,7 @@ const Dashboard = () => {
   const onUserSubmit = (event) => {
     event.preventDefault();
     if (inputVal !== '') {
-      dispatch(addUser({ name: inputVal }));
+      dispatch(addUser({ name: inputVal, userid: uniqid(), points: 0 }));
       setInputVal('');
     }
   }
@@ -25,7 +29,9 @@ const Dashboard = () => {
       return (
         users.map(user => {
           return (
-            <button key={user.name}>{user.name}</button>
+            <Link to="/activities">
+              <button key={user.userid} onClick={ () => dispatch(setActive(user))}>{user.name}</button>
+            </Link>
           )
         })
       )
@@ -35,16 +41,27 @@ const Dashboard = () => {
   return (
     <div>
       <div>
-        <h1>Who is playing?</h1>
+        <h2 className="ui header center aligned">Who is playing?</h2>
         <ul>
           {renderUsers()}
         </ul>
       </div>
       
-      <form onSubmit={onUserSubmit}>
-        <input type="text" value={inputVal} onChange={onInputChange} />
-        <button>Add Person</button>
-      </form>
+      <div className="ui centered middle aligned four column grid">
+        <form onSubmit={onUserSubmit}>
+            <input type="text" value={inputVal} onChange={onInputChange} />
+            <div>
+                <button className="ui vertical animated button">
+                    <div class="hidden content">
+                        <i aria-hidden="true" className="user plus icon"></i>
+                    </div>
+                    <div className="visible content">
+                        Add User
+                    </div>
+                </button>
+            </div>
+        </form>
+       </div>
     </div>
   )
 }

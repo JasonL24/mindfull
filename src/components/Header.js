@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
       <div>
-          <h1 style={{color: "blue"}}>I'm HELPING</h1>
+          <h1 className="ui dividing header center aligned teal">Active Mind</h1>
       </div>
     )
 }
