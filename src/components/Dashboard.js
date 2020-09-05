@@ -41,18 +41,19 @@ const Dashboard = () => {
   return (
     <div>
       <div>
-        <h2 className="ui header center aligned">Who is playing?</h2>
-        <ul>
+        <h2 className="ui header center aligned welcome-msg">Welcome! Who is playing?</h2>
+        <ul className="user-buttons">
           {renderUsers()}
         </ul>
       </div>
       
+      <h4 className="ui centered middle aligned four column grid">Don't see your name?</h4>
       <div className="ui centered middle aligned four column grid">
         <form onSubmit={onUserSubmit}>
             <input type="text" value={inputVal} onChange={onInputChange} />
             <div>
                 <button className="ui vertical animated button">
-                    <div class="hidden content">
+                    <div className="hidden content">
                         <i aria-hidden="true" className="user plus icon"></i>
                     </div>
                     <div className="visible content">

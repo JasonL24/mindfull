@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import './Activities.css';
+
 const Activities = () => {
   const user = useSelector(state => state.activeUser);
   
-  const options = ['Trivia'];
+  const options = ['Trivia', "Memory"];
 
   const renderActivities = () => {
     return (
@@ -21,8 +23,10 @@ const Activities = () => {
 
   return (
     <div>
-      <h1>Hello {user.name}!</h1>
-      <h2>You have {user.points} points!</h2>
+      <div className="greeting">
+        <h1>Hello {user.name}!</h1>
+        <h2>You have {user.points} activity points!</h2>
+      </div>
       {renderActivities()}
     </div>
   )

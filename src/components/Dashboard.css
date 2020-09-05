@@ -2,3 +2,22 @@
     padding: 10%;
     color: blue;
 }
+
+.user-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-buttons button {
+  background-color: #00b5ad;
+  color: #ffffff;
+  text-decoration: none;
+  border: 5px solid #008e87;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 12%;
+  margin: 10px 5px;
+  padding: 45px 55px;
+
+}

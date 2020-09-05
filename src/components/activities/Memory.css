@@ -1,0 +1,22 @@
+.mem-greeting {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mem-img {
+  width: 150px;
+  height: 150px;
+}
+
+.outer-grid {
+  display: flex;
+  justify-content: center;
+  margin: 0 30%;
+}
+
+.block-img {
+  opacity: 0;
+  background-color: #00b5ad;
+}

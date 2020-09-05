@@ -7,6 +7,7 @@ export default (state = INITIAL_STATE, action) => {
     case SET_ACTIVE:
       return {...action.payload};
     case ADD_POINTS:
+      localStorage.setItem('activeUser', JSON.stringify(action.payload));
       return {...action.payload};
     default:
       return state;

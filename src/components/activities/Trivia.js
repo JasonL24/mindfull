@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTrivia, addPoints } from '../../actions';
 
 const Trivia = () => {
   const dispatch = useDispatch();
 
+  const [msg, setMsg] = useState('');
   const question = useSelector(state => state.trivia);
   const user = useSelector(state => state.activeUser);
 
@@ -23,9 +24,13 @@ const Trivia = () => {
   const checkAnswer = (ans) => {
     if (ans === question.correct_answer) {
       dispatch(addPoints(user, 100))
-      dispatch(getTrivia());
+      setMsg('Correct. Great job! +100 points');
+      setTimeout(() => {
+        dispatch(getTrivia());
+        setMsg('');
+      }, 2000)
     } else {
-      console.log("Incorrect!")
+      setMsg('Incorrect. Try again!');
     }
   }
 
@@ -33,7 +38,7 @@ const Trivia = () => {
     const answers = question.incorrect_answers;
     
     if (answers) {
-      if (answers.length != 4) {
+      if (answers.length !== 4) {
         answers.push(question.correct_answer);
         shuffleAnswers(answers);
       }
@@ -57,6 +62,16 @@ const Trivia = () => {
     }
   }
 
+  const showMsg = () => {
+    return (
+      <div>
+        <h3>
+          {msg}
+        </h3>
+      </div>
+    )
+  }
+
   return (
     <div>
       <h3 className="ui header center aligned">{showQuestion()}</h3>
@@ -64,6 +79,7 @@ const Trivia = () => {
         {renderAnswers()}
       </ul>
       {user.points}
+      {showMsg()}
     </div>
   )
 }

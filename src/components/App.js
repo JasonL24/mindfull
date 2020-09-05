@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import Header from './Header';
 import Activities from './Activities';
 import Trivia from './activities/Trivia';
+import Memory from './activities/Memory';
 
 const App = (props) => {
   return (
@@ -14,6 +15,7 @@ const App = (props) => {
         <Route path="/" exact component={Dashboard} />
         <Route path="/activities" component={Activities} />
         <Route path="/trivia" component={Trivia} />
+        <Route path="/memory" component={Memory} />
       </Router>
     </div>
   );

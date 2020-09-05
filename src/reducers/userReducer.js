@@ -10,14 +10,14 @@ export default (state = INITIAL_STATE, action) => {
       localStorage.setItem('users', JSON.stringify(localUsers));
       return [...state, action.payload];
     case ADD_POINTS:
-      return (
-        state.map(user => {
-          if (user.userid === action.payload.userid) {
-            user.points = action.payload.points;
-          }
-          return user;
-        })
-      )
+      state.map(user => {
+        if (user.userid === action.payload.userid) {
+          user.points = action.payload.points;
+        }
+        return user;
+      })
+      localStorage.setItem('users', JSON.stringify(state));
+      return state;
     default:
       return state;
   }
