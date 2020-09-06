@@ -14,6 +14,7 @@ const App = (props) => {
       <Router>
         <Header />
         <Route path="/" exact component={Dashboard} />
+        <Route path="/mindfull" exact component={Dashboard} />
         <Route path="/activities" component={Activities} />
         <Route path="/trivia" component={Trivia} />
         <Route path="/memory" component={Memory} />
