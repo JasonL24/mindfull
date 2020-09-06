@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00564f79e881b4ffcb6fe28da78a580d",
+    "revision": "573239f2ad1a7ceee82672bb8bc66d22",
     "url": "/mindfull/index.html"
   },
   {
-    "revision": "0e61548d1836070d713a",
+    "revision": "e739974c96affd369d9c",
     "url": "/mindfull/static/css/main.c7d5cae4.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindfull/static/js/2.121332fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e61548d1836070d713a",
-    "url": "/mindfull/static/js/main.5e5bf7b7.chunk.js"
+    "revision": "e739974c96affd369d9c",
+    "url": "/mindfull/static/js/main.d55ff5f3.chunk.js"
   },
   {
     "revision": "fdbafa5cdb320414eb82",
