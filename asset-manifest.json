@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mindfull/static/css/main.c7d5cae4.chunk.css",
-    "main.js": "/mindfull/static/js/main.d55ff5f3.chunk.js",
-    "main.js.map": "/mindfull/static/js/main.d55ff5f3.chunk.js.map",
+    "main.js": "/mindfull/static/js/main.f80b0909.chunk.js",
+    "main.js.map": "/mindfull/static/js/main.f80b0909.chunk.js.map",
     "runtime-main.js": "/mindfull/static/js/runtime-main.f9c2c775.js",
     "runtime-main.js.map": "/mindfull/static/js/runtime-main.f9c2c775.js.map",
     "static/js/2.121332fb.chunk.js": "/mindfull/static/js/2.121332fb.chunk.js",
     "static/js/2.121332fb.chunk.js.map": "/mindfull/static/js/2.121332fb.chunk.js.map",
     "index.html": "/mindfull/index.html",
-    "precache-manifest.f9f8ccadc254f4187d2fd46d7c426eb2.js": "/mindfull/precache-manifest.f9f8ccadc254f4187d2fd46d7c426eb2.js",
+    "precache-manifest.b693cb71188af05917c594a5b2e56cd2.js": "/mindfull/precache-manifest.b693cb71188af05917c594a5b2e56cd2.js",
     "service-worker.js": "/mindfull/service-worker.js",
     "static/css/main.c7d5cae4.chunk.css.map": "/mindfull/static/css/main.c7d5cae4.chunk.css.map",
     "static/js/2.121332fb.chunk.js.LICENSE.txt": "/mindfull/static/js/2.121332fb.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f9c2c775.js",
     "static/js/2.121332fb.chunk.js",
     "static/css/main.c7d5cae4.chunk.css",
-    "static/js/main.d55ff5f3.chunk.js"
+    "static/js/main.f80b0909.chunk.js"
   ]
 }
