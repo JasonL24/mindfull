@@ -1,6 +1,30 @@
 .heading{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Monoton', cursive;
     text-align: left;
     color: rgb(18, 41, 40);
     font-size: 50px;
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-container button {
+    margin: 15px 25px 0 0;
+    background-color: #00b5ad;
+    color: #ffffff;
+    text-decoration: none;
+    border: 3px solid #00b5ad;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 5%;
+    padding: 6px 8px;
+    z-index: 20;
+}
+
+.head-container button:hover {
+    background-color: #39cfc8;
+    border: 3px solid #39cfc8;
+    cursor: pointer;
 }

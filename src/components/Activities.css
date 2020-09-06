@@ -32,8 +32,14 @@
   margin: 10px 30px;
   padding: 45px;
   border-radius: 15%;
-  background-color: #008e87;
+  background-color: #00b5ad;
   cursor: pointer;
+}
+
+.activity-btn:hover {
+  background-color: #39cfc8;
+    border: #39cfc8;
+    cursor: pointer;
 }
 
 .activity-btn img {
